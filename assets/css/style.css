@@ -1,0 +1,133 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+}
+.header {
+    grid-area: "header";
+    background-color: #925363bb;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    /* GERADOR https://www.cssmatic.com/box-shadow */
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.43);
+}
+.header h1 {
+    margin: 0px;
+    font-weight: 350;
+    font-size: 2.8rem;
+}
+.header h2 {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.main {
+    grid-area: "content";
+    height: calc(100vh - 180px);
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.content {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.27);
+}
+.modulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.modulo {
+    flex-basis: 32%;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+.modulo h3 {
+    margin: 0px;
+    color: #444;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    /* background-color: rgba(172, 135, 144, 0.603); */
+}
+.modulo ul {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+.modulo ul li {
+    padding: 7px;
+    font-size: 1.3rem;
+    /* QUANDO CURSOR PASSAR NO LINK */
+    cursor: pointer;
+}
+.modulo ul li a {
+    display: flex;
+    text-decoration: none;
+    color: #222;
+}
+.modulo ul li:hover {
+    background-color: #eee;
+}
+
+
+.modulo.verde {border: 2px solid rgba(27, 141, 97, 0.603);}
+.modulo.verde h3 {background-color: rgba(27, 141, 97, 0.603);}
+
+.modulo.vermelho {border: 2px solid rgba(201, 47, 47, 0.76);}
+.modulo.vermelho h3 {background-color: rgba(201, 47, 47, 0.76);}
+
+.modulo.azul {border: 2px solid rgba(47, 88, 177, 0.589);}
+.modulo.azul h3 {background-color: rgba(47, 88, 177, 0.589);}
+
+.modulo.laranja {border: 2px solid rgba(192, 87, 38, 0.795);}
+.modulo.laranja h3 {background-color: rgba(192, 87, 38, 0.795);}
+
+.modulo.cinza {border: 2px solid rgba(99, 97, 97, 0.493);}
+.modulo.cinza h3 {background-color: rgba(99, 97, 97, 0.493);}
+
+.modulo.rosa {border: 2px solid rgba(236, 84, 191, 0.767);}
+.modulo.rosa h3 {background-color: rgba(236, 84, 191, 0.767);}
+
+.modulo.amarelo {border: 2px solid rgba(235, 231, 28, 0.815);}
+.modulo.amarelo h3 {background-color: rgba(235, 231, 28, 0.815);}
+
+.modulo.lilas {border: 2px solid rgba(134, 89, 143, 0.856);}
+.modulo.lilas h3 {background-color: rgba(134, 89, 143, 0.856);}
+
+.modulo.marrom {border: 2px solid rgba(139, 93, 60, 0.712);}
+.modulo.marrom h3 {background-color: rgba(139, 93, 60, 0.712);}
+
+
+.footer {
+    grid-area: "footer";
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+    color: #444;
+    /*PARA O FOOTER FICAR FIXO NA PARTE INFERIOR DA TELA:
+    /* position: sticky;
+    bottom: 0px; */
+}
